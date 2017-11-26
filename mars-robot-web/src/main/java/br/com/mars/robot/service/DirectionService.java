@@ -1,13 +1,13 @@
 package br.com.mars.robot.service;
 
 import br.com.mars.robot.entity.Direction;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
+@Service
 public class DirectionService {
 
     public Map<Direction, Map> sides = new HashMap<>();

@@ -1,5 +1,6 @@
 package br.com.mars.robot.entity;
 
+import br.com.mars.robot.exception.RobotCommandInvalidException;
 import br.com.mars.robot.service.DirectionService;
 
 public class Robot {
@@ -28,11 +29,11 @@ public class Robot {
     }
 
     public void rotate(DirectionService directionService, char command) {
-       Direction direction = (Direction) directionService.sides.get(this.direction).get(command);
-       if(direction == null) {
-           throw new RuntimeException();
-       }
-       this.direction = direction;
+        Direction direction = (Direction) directionService.sides.get(this.direction).get(command);
+        if (direction == null) {
+            throw new RobotCommandInvalidException();
+        }
+        this.direction = direction;
     }
 
     public Point getPoint() {

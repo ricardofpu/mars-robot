@@ -25,6 +25,7 @@ public class RobotService {
                 robot.rotate(directionService, command);
             }
         }
+        this.marsZone.validatePoint(robot.getPoint());
         return robot;
     }
 
