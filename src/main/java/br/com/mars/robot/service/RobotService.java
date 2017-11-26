@@ -2,52 +2,35 @@ package br.com.mars.robot.service;
 
 import br.com.mars.robot.entity.Direction;
 import br.com.mars.robot.entity.Point;
+import br.com.mars.robot.entity.Robot;
 import br.com.mars.robot.utils.MarsZone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
-
 @Service
 public class RobotService {
-
-    private Point point;
-    private Direction direction;
 
     @Autowired
     private MarsZone marsZone;
 
-    @PostConstruct
-    private void initPosition() {
-        Point point = marsZone.getZone().getPoint(0, 0);
-        setInitPosition(point, Direction.NORTH);
-    }
+    @Autowired
+    private DirectionService directionService;
 
-    public void handleCommand(String commands) {
+    public Robot handleCommands(String commands) {
+        Robot robot = createRobotWithDefaultPosition();
         for (char command : commands.toCharArray()) {
-            if(isMoveCommand(command)) {
-
+            if (isMoveCommand(command)) {
+                robot.move();
+            } else {
+                robot.rotate(directionService, command);
             }
         }
+        return robot;
     }
 
-    public String getPosition() {
-        return new StringBuilder().append(point.getX()).append(", ")
-                .append(point.getY()).append(", ")
-                .append(direction.valueOf()).toString();
-    }
-
-    private void setInitPosition(Point point, Direction direction) {
-        setPoint(point);
-        setDirection(direction);
-    }
-
-    private void setPoint(Point point) {
-        this.point = point;
-    }
-
-    private void setDirection(Direction direction) {
-        this.direction = direction;
+    private Robot createRobotWithDefaultPosition() {
+        Point point = marsZone.getZone().getPoint(0, 0);
+        return new Robot(new Point(point.getX(), point.getY()), Direction.NORTH);
     }
 
     private boolean isMoveCommand(char command) {

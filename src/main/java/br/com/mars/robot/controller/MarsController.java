@@ -1,5 +1,6 @@
 package br.com.mars.robot.controller;
 
+import br.com.mars.robot.entity.Robot;
 import br.com.mars.robot.service.RobotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,8 +20,8 @@ public class MarsController {
 
     @PostMapping(value = "/{commands}", produces = MediaType.TEXT_HTML_VALUE)
     public ResponseEntity move(@PathVariable("commands") String commands) {
-        robotService.handleCommand(commands);
-        return new ResponseEntity<>(robotService.getPosition(), HttpStatus.OK);
+        Robot robot = robotService.handleCommands(commands);
+        return new ResponseEntity<>(robot.getPosition(), HttpStatus.OK);
     }
 
 }

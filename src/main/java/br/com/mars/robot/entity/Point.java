@@ -18,6 +18,22 @@ public class Point {
         return y;
     }
 
+    public void plusX() {
+        this.x += 1;
+    }
+
+    public void minusX() {
+        this.x -= 1;
+    }
+
+    public void plusY() {
+        this.y += 1;
+    }
+
+    public void minusY() {
+        this.y -= 1;
+    }
+
     public String getCoordinate() {
         return x + ", " + y;
     }

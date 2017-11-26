@@ -1,7 +1,7 @@
 package br.com.mars.robot.entity;
 
 
-import static br.com.mars.robot.entity.Direction.Constants.*;
+import static br.com.mars.robot.utils.Constants.*;
 
 public enum Direction {
 
@@ -27,15 +27,6 @@ public enum Direction {
             }
         }
         return null;
-    }
-
-    class Constants {
-
-        public static final char N = 'N';
-        public static final char S = 'S';
-        public static final char E = 'E';
-        public static final char W = 'W';
-
     }
 
 }
