@@ -1,4 +1,4 @@
-package br.com.mars.robot.entity;
+package br.com.mars.robot.web.entity;
 
 public class Zone {
 

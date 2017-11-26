@@ -1,8 +1,8 @@
-package br.com.mars.robot.utils;
+package br.com.mars.robot.web.service;
 
-import br.com.mars.robot.entity.Point;
-import br.com.mars.robot.entity.Zone;
-import br.com.mars.robot.exception.InvalidPositionException;
+import br.com.mars.robot.web.entity.Point;
+import br.com.mars.robot.web.entity.Zone;
+import br.com.mars.robot.web.exception.InvalidPositionException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

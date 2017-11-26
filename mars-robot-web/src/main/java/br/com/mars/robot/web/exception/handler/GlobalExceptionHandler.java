@@ -1,8 +1,8 @@
-package br.com.mars.robot.exception.handler;
+package br.com.mars.robot.web.exception.handler;
 
-import br.com.mars.robot.exception.ExceptionResponse;
-import br.com.mars.robot.exception.InvalidPositionException;
-import br.com.mars.robot.exception.RobotCommandInvalidException;
+import br.com.mars.robot.web.exception.ExceptionResponse;
+import br.com.mars.robot.web.exception.InvalidPositionException;
+import br.com.mars.robot.web.exception.RobotCommandInvalidException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;

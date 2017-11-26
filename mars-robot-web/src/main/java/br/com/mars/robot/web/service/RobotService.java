@@ -1,9 +1,8 @@
-package br.com.mars.robot.service;
+package br.com.mars.robot.web.service;
 
-import br.com.mars.robot.entity.Direction;
-import br.com.mars.robot.entity.Point;
-import br.com.mars.robot.entity.Robot;
-import br.com.mars.robot.utils.MarsZone;
+import br.com.mars.robot.web.entity.Direction;
+import br.com.mars.robot.web.entity.Point;
+import br.com.mars.robot.web.entity.Robot;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

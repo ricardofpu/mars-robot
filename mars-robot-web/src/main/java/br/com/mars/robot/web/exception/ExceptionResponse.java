@@ -1,4 +1,4 @@
-package br.com.mars.robot.exception;
+package br.com.mars.robot.web.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

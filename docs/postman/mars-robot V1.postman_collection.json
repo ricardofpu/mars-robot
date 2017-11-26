@@ -1,0 +1,36 @@
+{
+	"id": "e984f465-b393-4b7d-9866-3a93691ea460",
+	"name": "Mars Robot",
+	"description": "",
+	"order": [
+		"12e986e5-04d2-0243-e3d4-d89ec6ec4e28"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1511717921104,
+	"owner": "771430",
+	"public": false,
+	"requests": [
+		{
+			"id": "12e986e5-04d2-0243-e3d4-d89ec6ec4e28",
+			"headers": "",
+			"headerData": [],
+			"url": "{{host}}/rest/mars/MMRMMRMM",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Status code is 200\"] = (responseCode.code === 200);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1511739134879,
+			"name": "[MARS] - command",
+			"description": "",
+			"collectionId": "e984f465-b393-4b7d-9866-3a93691ea460",
+			"responses": []
+		}
+	]
+}

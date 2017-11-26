@@ -1,4 +1,4 @@
-package br.com.mars.robot;
+package br.com.mars.robot.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

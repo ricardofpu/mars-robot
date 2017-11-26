@@ -1,7 +1,7 @@
-package br.com.mars.robot.entity;
+package br.com.mars.robot.web.entity;
 
-import br.com.mars.robot.exception.RobotCommandInvalidException;
-import br.com.mars.robot.service.DirectionService;
+import br.com.mars.robot.web.exception.RobotCommandInvalidException;
+import br.com.mars.robot.web.service.DirectionService;
 
 public class Robot {
 

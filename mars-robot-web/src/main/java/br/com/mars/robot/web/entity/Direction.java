@@ -1,14 +1,14 @@
-package br.com.mars.robot.entity;
+package br.com.mars.robot.web.entity;
 
 
-import static br.com.mars.robot.utils.Constants.*;
+import br.com.mars.robot.web.utils.Constants;
 
 public enum Direction {
 
-    NORTH(N),
-    SOUTH(S),
-    EAST(E),
-    WEST(W);
+    NORTH(Constants.N),
+    SOUTH(Constants.S),
+    EAST(Constants.E),
+    WEST(Constants.W);
 
     private final char value;
 

@@ -1,4 +1,4 @@
-package br.com.mars.robot.utils;
+package br.com.mars.robot.web.utils;
 
 public class Constants {
 

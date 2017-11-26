@@ -43,7 +43,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>br.com.mars.robot.Application</mainClass>
+                    <mainClass>br.com.mars.robot.web.Application</mainClass>
                 </configuration>
             </plugin>
 

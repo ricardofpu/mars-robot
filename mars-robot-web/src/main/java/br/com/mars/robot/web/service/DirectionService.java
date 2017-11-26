@@ -1,6 +1,6 @@
-package br.com.mars.robot.service;
+package br.com.mars.robot.web.service;
 
-import br.com.mars.robot.entity.Direction;
+import br.com.mars.robot.web.entity.Direction;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;

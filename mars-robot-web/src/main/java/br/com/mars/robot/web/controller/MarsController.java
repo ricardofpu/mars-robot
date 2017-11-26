@@ -1,7 +1,7 @@
-package br.com.mars.robot.controller;
+package br.com.mars.robot.web.controller;
 
-import br.com.mars.robot.entity.Robot;
-import br.com.mars.robot.service.RobotService;
+import br.com.mars.robot.web.entity.Robot;
+import br.com.mars.robot.web.service.RobotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
