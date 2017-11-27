@@ -28,12 +28,12 @@ public class Robot {
         }
     }
 
-    public void rotate(DirectionService directionService, char command) {
+    public void rotate(DirectionService directionService, Commands command) {
         Direction direction = (Direction) directionService.sides.get(this.direction).get(command);
         if (direction == null) {
             throw new RobotCommandInvalidException();
         }
-        this.direction = direction;
+        this.setDirection(direction);
     }
 
     public Point getPoint() {

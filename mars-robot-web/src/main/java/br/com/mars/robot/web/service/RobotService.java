@@ -1,5 +1,6 @@
 package br.com.mars.robot.web.service;
 
+import br.com.mars.robot.web.entity.Commands;
 import br.com.mars.robot.web.entity.Direction;
 import br.com.mars.robot.web.entity.Point;
 import br.com.mars.robot.web.entity.Robot;
@@ -21,7 +22,7 @@ public class RobotService {
             if (isMoveCommand(command)) {
                 robot.move();
             } else {
-                robot.rotate(directionService, command);
+                robot.rotate(directionService, Commands.valueOf(command));
             }
         }
         this.marsZone.validatePoint(robot.getPoint());
@@ -34,6 +35,6 @@ public class RobotService {
     }
 
     private boolean isMoveCommand(char command) {
-        return command == 'M';
+        return command == Commands.MOVE.valueOf();
     }
 }
