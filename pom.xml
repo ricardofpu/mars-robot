@@ -20,6 +20,7 @@
 
     <modules>
         <module>mars-robot-web</module>
+        <module>mars-robot-exception-handler</module>
     </modules>
 
     <properties>
@@ -41,6 +42,12 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>mars-robot-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>mars-robot-exception-handler</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

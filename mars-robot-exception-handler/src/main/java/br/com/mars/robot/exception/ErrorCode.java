@@ -1,4 +1,4 @@
-package br.com.mars.robot.web.exception;
+package br.com.mars.robot.exception;
 
 public class ErrorCode {
 

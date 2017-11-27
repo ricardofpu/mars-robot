@@ -1,8 +1,8 @@
 package br.com.mars.robot.web.service;
 
+import br.com.mars.robot.exception.InvalidPositionException;
 import br.com.mars.robot.web.entity.Point;
 import br.com.mars.robot.web.entity.Zone;
-import br.com.mars.robot.web.exception.InvalidPositionException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,8 +1,8 @@
 package br.com.mars.robot.web.service;
 
+import br.com.mars.robot.exception.InvalidPositionException;
+import br.com.mars.robot.exception.RobotCommandInvalidException;
 import br.com.mars.robot.web.entity.Robot;
-import br.com.mars.robot.web.exception.InvalidPositionException;
-import br.com.mars.robot.web.exception.RobotCommandInvalidException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
