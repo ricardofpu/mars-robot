@@ -1,14 +1,14 @@
 package br.com.mars.robot.web.entity;
 
 
-import br.com.mars.robot.web.utils.Constants;
+import static br.com.mars.robot.web.utils.Constants.*;
 
 public enum Direction {
 
-    NORTH(Constants.N),
-    SOUTH(Constants.S),
-    EAST(Constants.E),
-    WEST(Constants.W);
+    NORTH(N),
+    SOUTH(S),
+    EAST(E),
+    WEST(W);
 
     private final char value;
 
@@ -20,13 +20,5 @@ public enum Direction {
         return this.value;
     }
 
-    private Direction valueOf(char dir) {
-        for (Direction direction : Direction.values()) {
-            if (dir == direction.valueOf()) {
-                return direction;
-            }
-        }
-        return null;
-    }
 
 }
