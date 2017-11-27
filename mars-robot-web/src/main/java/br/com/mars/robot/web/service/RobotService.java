@@ -35,6 +35,6 @@ public class RobotService {
     }
 
     private boolean isMoveCommand(char command) {
-        return command == Commands.MOVE.valueOf();
+        return Commands.MOVE.valueOf() == command;
     }
 }
