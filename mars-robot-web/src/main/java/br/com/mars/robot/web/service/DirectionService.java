@@ -1,5 +1,6 @@
 package br.com.mars.robot.web.service;
 
+import br.com.mars.robot.web.entity.Commands;
 import br.com.mars.robot.web.entity.Direction;
 import org.springframework.stereotype.Service;
 
@@ -21,9 +22,9 @@ public class DirectionService {
     }
 
     private Map setSides(Direction left, Direction right) {
-        Map<Character, Direction> map = new HashMap<>();
-        map.put('L', left);
-        map.put('R', right);
+        Map<Commands, Direction> map = new HashMap<>();
+        map.put(Commands.LEFT, left);
+        map.put(Commands.RIGHT, right);
         return map;
     }
 }
