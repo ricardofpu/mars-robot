@@ -1,3 +1,5 @@
+[![Code Coverage](https://img.shields.io/codecov/c/github/pvorb/property-providers/develop.svg)](https://codecov.io/gh/ricardofpu/mars-robot/property-providers?branch=master)
+
 # Mars Robot
 
 API que permite enviar comandos para saber a posição exata de um robô.
