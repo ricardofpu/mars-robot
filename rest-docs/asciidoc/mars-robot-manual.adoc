@@ -1,0 +1,67 @@
+= Mars Robot
+:example-caption!:
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 5
+
+[[mars]]
+= Mars Robot
+
+This is a manual for documentation of services the Mars Robot Command Handler
+
+
+== Robot
+
+This is a manual for documentation of services the mars robot API
+
+
+=== Move
+
+Request:
+include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-success/http-request.adoc[]
+
+Path parameters:
+include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-success/path-parameters.adoc[]
+
+Response success:
+include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-success/http-response.adoc[]
+
+=== Move to right
+
+Request:
+include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-right-success/http-request.adoc[]
+
+Path parameters:
+include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-right-success/path-parameters.adoc[]
+
+Response success:
+include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-right-success/http-response.adoc[]
+
+=== Move to left
+
+Request:
+include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-left-success/http-request.adoc[]
+
+Path parameters:
+include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-left-success/path-parameters.adoc[]
+
+Response success:
+include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-left-success/http-response.adoc[]
+
+=== Failures
+
+Request fail when command is invalid
+
+Request:
+include::{snippets}/mars-robot-web/target/generated-snippets/fail-robot-command-invalid/http-request.adoc[]
+
+Response:
+include::{snippets}/mars-robot-web/target/generated-snippets/fail-robot-command-invalid/http-response.adoc[]
+
+Request fail when position is invalid
+
+Request:
+include::{snippets}/mars-robot-web/target/generated-snippets/fail-robot-command-invalid-position/http-request.adoc[]
+
+Response:
+include::{snippets}/mars-robot-web/target/generated-snippets/fail-robot-command-invalid-position/http-response.adoc[]

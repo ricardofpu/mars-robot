@@ -12,17 +12,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 public class MarsControllerTest extends ControllerBaseTest {
 
-    private static final String COMMAND_PATH_VARIABLE = "Identify a command received in request. Commands valid are L, R and M";
-    private static final String STRING_TYPE = "Type of string";
-
+    private static final String COMMAND_PATH_VARIABLE = "Identify a command received in request. Commands valid are L (left), R (right) and M (move)";
 
     @Test
     public void robotCommandSuccess() throws Exception {
-        String command = "MML";
+        String command = "MM";
         this.mockMvc.perform(post("/rest/mars/{commands}", command)
                 .contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(status().isOk())
-                .andExpect(content().string("0, 2, W"))
+                .andExpect(content().string("0, 2, N"))
                 .andDo(
                         documentationResultHandler.document(
                                 pathParameters(
@@ -39,6 +37,22 @@ public class MarsControllerTest extends ControllerBaseTest {
                 .contentType(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(status().isOk())
                 .andExpect(content().string("2, 0, S"))
+                .andDo(
+                        documentationResultHandler.document(
+                                pathParameters(
+                                        parameterWithName("commands").description(COMMAND_PATH_VARIABLE)
+                                )
+                        )
+                );
+    }
+
+    @Test
+    public void robotCommandMoveToLeftSuccess() throws Exception {
+        String command = "MML";
+        this.mockMvc.perform(post("/rest/mars/{commands}", command)
+                .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(status().isOk())
+                .andExpect(content().string("0, 2, W"))
                 .andDo(
                         documentationResultHandler.document(
                                 pathParameters(
