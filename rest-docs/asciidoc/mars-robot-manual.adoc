@@ -31,9 +31,6 @@ include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-succe
 Request:
 include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-right-success/http-request.adoc[]
 
-Path parameters:
-include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-right-success/path-parameters.adoc[]
-
 Response success:
 include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-right-success/http-response.adoc[]
 
@@ -41,9 +38,6 @@ include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-
 
 Request:
 include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-left-success/http-request.adoc[]
-
-Path parameters:
-include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-left-success/path-parameters.adoc[]
 
 Response success:
 include::{snippets}/mars-robot-web/target/generated-snippets/robot-command-move-to-left-success/http-response.adoc[]
