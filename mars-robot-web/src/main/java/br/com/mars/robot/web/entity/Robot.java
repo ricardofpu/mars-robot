@@ -2,8 +2,12 @@ package br.com.mars.robot.web.entity;
 
 import br.com.mars.robot.exception.RobotCommandInvalidException;
 import br.com.mars.robot.web.service.DirectionService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Robot {
+
+    private Logger LOG = LogManager.getLogger(this.getClass());
 
     private Point point;
     private Direction direction;
@@ -31,6 +35,7 @@ public class Robot {
     public void rotate(DirectionService directionService, Commands command) {
         Direction direction = (Direction) directionService.sides.get(this.direction).get(command);
         if (direction == null) {
+            LOG.debug("Command {} received are invalid.", command.valueOf());
             throw new RobotCommandInvalidException();
         }
         this.setDirection(direction);

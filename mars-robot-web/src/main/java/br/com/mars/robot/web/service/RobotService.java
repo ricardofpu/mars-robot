@@ -4,11 +4,15 @@ import br.com.mars.robot.web.entity.Commands;
 import br.com.mars.robot.web.entity.Direction;
 import br.com.mars.robot.web.entity.Point;
 import br.com.mars.robot.web.entity.Robot;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class RobotService {
+
+    private Logger LOG = LogManager.getLogger(this.getClass());
 
     @Autowired
     private MarsZone marsZone;
@@ -17,6 +21,8 @@ public class RobotService {
     private DirectionService directionService;
 
     public Robot handleCommands(String commands) {
+        LOG.debug("Received commands to handle: {}", commands);
+
         Robot robot = createRobotWithDefaultPosition();
         for (char command : commands.toCharArray()) {
             if (isMoveCommand(command)) {
