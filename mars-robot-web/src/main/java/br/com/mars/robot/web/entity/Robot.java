@@ -35,7 +35,7 @@ public class Robot {
     public void rotate(DirectionService directionService, Commands command) {
         Direction direction = (Direction) directionService.sides.get(this.direction).get(command);
         if (direction == null) {
-            LOG.debug("Command {} received are invalid.", command.valueOf());
+            LOG.debug("Command {} received are invalid.", command);
             throw new RobotCommandInvalidException();
         }
         this.setDirection(direction);
