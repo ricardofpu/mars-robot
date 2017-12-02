@@ -23,7 +23,7 @@ public class RobotServiceTest {
         Robot robot = robotService.handleCommands(command);
 
         Assert.assertNotNull(robot);
-        Assert.assertEquals(robot.getPosition(), "0, 1, N");
+        Assert.assertEquals("0, 1, N", robot.getPosition());
     }
 
     @Test
@@ -32,7 +32,7 @@ public class RobotServiceTest {
         Robot robot = robotService.handleCommands(command);
 
         Assert.assertNotNull(robot);
-        Assert.assertEquals(robot.getPosition(), "0, 2, N");
+        Assert.assertEquals("0, 2, N", robot.getPosition());
     }
 
     @Test
@@ -41,7 +41,7 @@ public class RobotServiceTest {
         Robot robot = robotService.handleCommands(command);
 
         Assert.assertNotNull(robot);
-        Assert.assertEquals(robot.getPosition(), "0, 2, W");
+        Assert.assertEquals("0, 2, W", robot.getPosition());
     }
 
     @Test
@@ -50,7 +50,7 @@ public class RobotServiceTest {
         Robot robot = robotService.handleCommands(command);
 
         Assert.assertNotNull(robot);
-        Assert.assertEquals(robot.getPosition(), "0, 2, E");
+        Assert.assertEquals("0, 2, E", robot.getPosition());
     }
 
     @Test
@@ -59,7 +59,7 @@ public class RobotServiceTest {
         Robot robot = robotService.handleCommands(command);
 
         Assert.assertNotNull(robot);
-        Assert.assertEquals(robot.getPosition(), "2, 0, E");
+        Assert.assertEquals("2, 0, E", robot.getPosition());
     }
 
     @Test
@@ -68,7 +68,7 @@ public class RobotServiceTest {
         Robot robot = robotService.handleCommands(command);
 
         Assert.assertNotNull(robot);
-        Assert.assertEquals(robot.getPosition(), "2, 0, N");
+        Assert.assertEquals("2, 0, N", robot.getPosition());
     }
 
     @Test
@@ -77,7 +77,7 @@ public class RobotServiceTest {
         Robot robot = robotService.handleCommands(command);
 
         Assert.assertNotNull(robot);
-        Assert.assertEquals(robot.getPosition(), "2, 2, E");
+        Assert.assertEquals("2, 2, E", robot.getPosition());
     }
 
     @Test
@@ -86,7 +86,7 @@ public class RobotServiceTest {
         Robot robot = robotService.handleCommands(command);
 
         Assert.assertNotNull(robot);
-        Assert.assertEquals(robot.getPosition(), "4, 4, E");
+        Assert.assertEquals("4, 4, E", robot.getPosition());
     }
 
     @Test(expected = RobotCommandInvalidException.class)
