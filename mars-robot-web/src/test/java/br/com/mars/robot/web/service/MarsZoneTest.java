@@ -4,7 +4,6 @@ import br.com.mars.robot.exception.InvalidPositionException;
 import br.com.mars.robot.web.entity.Point;
 import br.com.mars.robot.web.entity.Zone;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,31 +17,30 @@ public class MarsZoneTest {
     @Autowired
     private MarsZone marsZone;
 
-    private Zone zone;
-
-    @Before
-    public void init() {
-        this.zone = marsZone.getZone();
+    @Test
+    public void getZoneSuccess() {
+        Zone zone = marsZone.getZone();
         Assert.assertNotNull(zone);
+        Assert.assertNotNull(zone.getPoint(0, 0));
     }
 
     @Test
     public void getInitialPointSuccess() {
         Point point = marsZone.getZone().getPoint(0, 0);
-        Assert.assertEquals(point.getX(), 0);
-        Assert.assertEquals(point.getY(), 0);
+        Assert.assertEquals(0, point.getX());
+        Assert.assertEquals(0, point.getY());
     }
 
     @Test
     public void getLastPointSuccess() {
         Point point = marsZone.getZone().getPoint(4, 4);
-        Assert.assertEquals(point.getX(), 4);
-        Assert.assertEquals(point.getY(), 4);
+        Assert.assertEquals(4, point.getX());
+        Assert.assertEquals(4, point.getY());
     }
 
     @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void failGetInvalidPoint() {
-        Point point = marsZone.getZone().getPoint(5, 5);
+        marsZone.getZone().getPoint(5, 5);
     }
 
     @Test

@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @ControllerAdvice
 @ResponseBody
-public class GlobalExceptionHandler extends WebMvcConfigurerAdapter {
+public class GlobalExceptionHandler {
 
     private final Logger LOG = LogManager.getLogger(this.getClass());
 

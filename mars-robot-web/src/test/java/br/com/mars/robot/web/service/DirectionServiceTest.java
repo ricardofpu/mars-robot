@@ -22,31 +22,31 @@ public class DirectionServiceTest {
     public void validateSidesNorth() {
         Map map = this.directionService.sides.get(Direction.NORTH);
 
-        Assert.assertEquals(map.get(Commands.LEFT), Direction.WEST);
-        Assert.assertEquals(map.get(Commands.RIGHT), Direction.EAST);
+        Assert.assertEquals(Direction.WEST, map.get(Commands.LEFT));
+        Assert.assertEquals(Direction.EAST, map.get(Commands.RIGHT));
     }
 
     @Test
     public void validateSidesSouth() {
         Map map = this.directionService.sides.get(Direction.SOUTH);
 
-        Assert.assertEquals(map.get(Commands.LEFT), Direction.EAST);
-        Assert.assertEquals(map.get(Commands.RIGHT), Direction.WEST);
+        Assert.assertEquals(Direction.EAST, map.get(Commands.LEFT));
+        Assert.assertEquals(Direction.WEST, map.get(Commands.RIGHT));
     }
 
     @Test
     public void validateSidesEast() {
         Map map = this.directionService.sides.get(Direction.EAST);
 
-        Assert.assertEquals(map.get(Commands.LEFT), Direction.NORTH);
-        Assert.assertEquals(map.get(Commands.RIGHT), Direction.SOUTH);
+        Assert.assertEquals(Direction.NORTH, map.get(Commands.LEFT));
+        Assert.assertEquals(Direction.SOUTH, map.get(Commands.RIGHT));
     }
 
     @Test
     public void validateSidesWest() {
         Map map = this.directionService.sides.get(Direction.WEST);
 
-        Assert.assertEquals(map.get(Commands.LEFT), Direction.SOUTH);
-        Assert.assertEquals(map.get(Commands.RIGHT), Direction.NORTH);
+        Assert.assertEquals(Direction.SOUTH, map.get(Commands.LEFT));
+        Assert.assertEquals(Direction.NORTH, map.get(Commands.RIGHT));
     }
 }
